@@ -1,0 +1,17 @@
+version: "27.3.1"
+
+services:
+  npm:
+    image: npm:latest
+    working_dir: /app
+    entrypoint: ["npm"]
+    volumes: 
+      - .:/app
+  node:
+    build:
+      context: .
+      dockerfile: dockerfiles/node-ts.dockerfile
+    working_dir: /app
+    entrypoint: ["ts-node"]
+    volumes: 
+      - .:/app
