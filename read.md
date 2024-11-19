@@ -8,4 +8,4 @@ A docker compose exercise
 ## node
 *Example*:
 * docker-compose run --rm --entrypoint tsc node --init
-* docker-compose run --rm node leet/my_file.js
+* docker-compose run --rm node leet/my_file.ts
