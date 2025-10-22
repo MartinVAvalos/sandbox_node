@@ -31,10 +31,10 @@ function optimized(s: string): number {
 
     }
 
-    return 0;
+    return charMap.size;
 };
 
-console.log(optimized("aab"));
+// console.log(optimized("aab"));
 // console.log(lengthOfLongestSubstring("bbbbb"));
-// console.log(lengthOfLongestSubstring("pwwkew"));
+console.log(lengthOfLongestSubstring("pwwkew"));
 // console.log(lengthOfLongestSubstring("abcabcbb"));

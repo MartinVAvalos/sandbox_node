@@ -15,3 +15,12 @@ services:
     entrypoint: ["ts-node"]
     volumes: 
       - .:/app
+    
+  vanilla:
+    build:
+      context: .
+      dockerfile: dockerfiles/vanilla.dockerfile
+    working_dir: /app
+    entrypoint: ["node"]
+    volumes:
+      - .:/app
