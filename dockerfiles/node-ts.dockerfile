@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:20
 
 WORKDIR /app
 
-RUN npm install -g ts-node typescript npm
+RUN npm install -g ts-node typescript
 
 COPY package*.json ./
 RUN npm install

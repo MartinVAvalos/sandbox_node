@@ -1,11 +1,16 @@
 # Docker Compose
+
 A docker compose exercise
 
 ## npm
-*Example*:
-* docker-compose run npm install typescript ts-node @types/node --save-dev
+
+_Example_:
+
+- docker-compose run npm install typescript ts-node @types/node --save-dev
 
 ## node
-*Example*:
-* docker-compose run --rm --entrypoint tsc node --init
-* docker-compose run --rm node leet/my_file.ts
+
+_Example_:
+
+- docker-compose up -d node
+- docker-compose exec node ts-node leet/my-file.ts
