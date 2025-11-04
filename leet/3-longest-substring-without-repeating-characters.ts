@@ -21,20 +21,27 @@ function lengthOfLongestSubstring(s: string): number {
     return maxLength;
 };
 
-function optimized(s: string): number {
-    const charMap = new Set<string>();
+function lengthOfLongestSubstring2(s: string): number { //?not as good as first answer
+    const seen = new Set<string>();
+    let left = 0;
+    let best = 0;
 
     for (let right = 0; right < s.length; right++) {
-        
+        const ch = s[right];
 
-        charMap.add(s[right]);
+        // shrink window while duplicate is present
+        while (seen.has(ch)) {
+            seen.delete(s[left]);
+            left++;
+        }
 
+        seen.add(ch);
+        best = Math.max(best, right - left + 1);
     }
 
-    return charMap.size;
-};
+    return best;
+}
 
-// console.log(optimized("aab"));
 // console.log(lengthOfLongestSubstring("bbbbb"));
 console.log(lengthOfLongestSubstring("pwwkew"));
 // console.log(lengthOfLongestSubstring("abcabcbb"));
